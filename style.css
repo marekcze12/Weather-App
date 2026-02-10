@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #222; /* Základní barva, než se načte obrázek */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.8s ease-in-out; /* Plynulý přechod obrázků */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.karta {
+    width: 90%;
+    max-width: 470px;
+    /* Původní gradient nahradíme poloprůhlednou barvou, aby vyniklo pozadí stránky */
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(10px); /* Rozmaže pozadí pod kartou */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.datum {
+    margin-top: 25px;    /* Odsazení shora (od vyhledávání) */
+    margin-bottom: 10px; /* Odsazení zdola (od ikonky počasí) */
+    font-size: 15px;     /* Mírně zvětšíme písmo */
+    color: rgba(255, 255, 255, 0.9); /* Jasnější bílá */
+    font-weight: 300;
+    text-transform: capitalize; /* První písmeno velké */
+}
+
+.popis-pocasi {
+    font-size: 20px;
+    text-transform: capitalize; /* První písmeno velké */
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.najit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.najit input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.najit button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.najit button img {
+    width: 22px;
+    filter: invert(100%);
+}
+
+.pocasi-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.pocasi h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.pocasi h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column; /* Ikonky nad textem */
+    align-items: center;
+    text-align: center;
+}
+
+.col img {
+    width: 30px; /* Menší ikonky */
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+.pocasi, .chyba {
+    display: none;
+}
+
+.chyba {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ffcccc;
+}
+
+.predpoved {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.predpoved-nadpis {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.predpoved-seznam {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Umožní skrolování na mobilu */
+    gap: 15px;
+}
+
+.predpoved-polozka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.predpoved-polozka p {
+    font-size: 14px;
+}
+
+.predpoved-polozka img {
+    width: 40px;
+}
+
+.predpoved-polozka .predpoved-temp {
+    font-weight: 600;
+}
+
+/* Definice animace */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/*Třída, kterou aplikujeme po načtení dat */
+.pocasi.active {
+    display: block;
+    animation: fadeIn 0.6s ease-out forwards;
+}

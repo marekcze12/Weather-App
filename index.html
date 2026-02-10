@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="karta">
+        <div class="najit">
+            <input type="text" placeholder="Zadej město" spellcheck="false">
+            <button><img src="https://img.icons8.com/ios-filled/50/ffffff/search--v1.png" alt="hledat"></button>
+        </div>
+
+        <div class="pocasi">
+            <p class="datum">--</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="pocasi-icon">
+            <p class="popis-pocasi">--</p>
+            <h1 class="teplota">22°C</h1>
+            <h2 class="mesto">Praha</h2>
+        </div>
+
+        <div class="detail">
+            <div class="col">
+                <img src="https://img.icons8.com/ios/50/ffffff/humidity.png">
+                <div>
+                    <p class="vlhkost">50%</p>
+                    <p>Vlhkost</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://img.icons8.com/ios/50/ffffff/thermometer.png">
+            <div>
+                <p class="pocitova">--°C</p>
+                <p>Pocitová</p>
+            </div>
+            </div>
+            <div class="col">
+                <img src="https://img.icons8.com/ios/50/ffffff/wind--v1.png">
+                <div>
+                    <p class="vitr">15 km/h</p>
+                    <p>Vítr</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="predpoved">
+            <div class="predpoved-nadpis">Předpověď na nejbližší hodiny</div>
+            <div class="predpoved-seznam">
+                </div>
+        </div>
+
+        <div class="chyba">
+            <p>Neplatný název města!</p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
