@@ -22,10 +22,10 @@ Interaktivní webová aplikace pro sledování počasí, která dynamicky mění
    git clone [https://github.com/TVOJE-UZIVATELSKE-JMENO/weather-app.git](https://github.com/TVOJE-UZIVATELSKE-JMENO/weather-app.git)
 2. Otevřete soubor index.html v libovolném moderním prohlížeči.
 
-🔑 Poznámka k API
+## 🔑 Poznámka k API
 Aplikace využívá bezplatné rozhraní OpenWeatherMap. Pro vlastní testování je nutné mít v souboru script.js nastaven vlastní apiKey.
 
-📈 Plány do budoucna
+## 📈 Plány do budoucna
 
 [ ] Přidat vícedenní předpověď (5-7 dní).
 
