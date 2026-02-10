@@ -26,6 +26,7 @@ Interaktivní webová aplikace pro sledování počasí, která dynamicky mění
 Aplikace využívá bezplatné rozhraní OpenWeatherMap. Pro vlastní testování je nutné mít v souboru script.js nastaven vlastní apiKey.
 
 📈 Plány do budoucna
+
 [ ] Přidat vícedenní předpověď (5-7 dní).
 
 [ ] Možnost přepínání jednotek Celsius / Fahrenheit.
